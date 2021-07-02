@@ -1,0 +1,36 @@
+.banner {
+  display: flex;
+  height: 100%;
+  padding-top: 5.8%;
+  background: rgba(31, 30, 30, 0.774);
+}
+.banner img {
+  width: 40%;
+  margin: auto;
+  height: 50%;
+  border-radius: 0.5rem;
+  background: white;
+  transition: transform 1s;
+  box-shadow: 0.3px 0.3px 30px 1px black;
+}
+.banner img:hover {
+  transform: scale(1.09);
+}
+.banner_info {
+  color: rgba(255, 255, 255, 0.966);
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  display: flex;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  user-select: none;
+}
+.banner_info h1 {
+  /* transition: font-size 0.2s; */
+  transition: all 2s;
+}
+.banner_info h1:hover {
+  font-size: 6.12rem;
+  text-align: right;
+}

@@ -1,0 +1,98 @@
+.cuadro_aviso {
+  display: inline-block;
+  width: 500px;
+  position: relative;
+  perspective: 1000px;
+  margin: 1% 1% 1% 3.5%;
+  border-radius: 2rem;
+  cursor: pointer;
+  height: 700px;
+}
+.image {
+  border-radius: 2rem;
+  height: 100%;
+  width: 100%;
+}
+.cuadro_aviso:active .carta {
+  transform: rotateY(180deg);
+}
+.card_btn {
+  position: fixed;
+  left: 50%;
+  top: 90.5%;
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 2rem 2rem 0rem 0rem;
+  margin-left: -5%;
+  z-index: 1;
+  width: 17%;
+  height: 10%;
+  background: black;
+  cursor: pointer;
+  z-index: 1;
+}
+.cuadro_aviso:active {
+  border-radius: 0rem 0rem 2rem 2rem;
+  border-top: 0;
+}
+.cuadro_aviso:active .image {
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.carta {
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  width: 100%;
+  height: 100%;
+}
+
+.cara {
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: 0.3px 0.3px 1px 2px rgb(22, 22, 22);
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.cara.detras {
+  transform: rotateY(180deg);
+  color: #000;
+  background-image: url("/src/textura.jpeg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0.3px 0.3px 1px 2px rgb(22, 22, 22);
+}
+.character_details {
+  height: 90%;
+  display: flex;
+  flex-direction: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.character_details h1 {
+  font-family: "Benne", serif;
+  font-size: 2.2rem;
+  margin-left: 7%;
+}
+.character_details h5 {
+  font-family: "Benne", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.3px;
+}
+.character_details span {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+}
+.character_details span:first-of-type {
+  width: 100%;
+  padding: 6% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.3px 0.3px 1px 2px black;
+  border-radius: 2rem;
+}

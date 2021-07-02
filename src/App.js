@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Home, Header, Characters } from "./components";
+import React from "react";
 
 function App() {
+  let colors = [
+    "rgb(151,45,48)", // Gryffindor
+    "rgb(0,126,79)", // Slytherin
+    "rgb(248,192,0)", // Hufflepuff
+    "rgb(36,56,117)", // Ravenclaw
+  ];
+  let color = colors[Math.floor(Math.random() * (3 - 0 + 1)) + 0];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    color && (
+      <Router>
+        <Header color={color} />
+        <Switch>
+          <Route exact path="/" color={color}>
+            <Home color={color} />
+          </Route>
+          <Route exact path="/characters">
+            <Characters color={color} />
+          </Route>
+        </Switch>
+      </Router>
+    )
   );
 }
 
