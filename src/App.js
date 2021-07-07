@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home, Header, Characters } from "./components";
+import { Home, Characters } from "./components";
 import React from "react";
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
   return (
     color && (
       <Router>
-        <Header color={color} />
         <Switch>
           <Route exact path="/" color={color}>
             <Home color={color} />

@@ -7,6 +7,7 @@ import Gryffindor from "../gryffindor.jpeg";
 import Slytherin from "../slytherin.jpeg";
 import Ravenclaw from "../ravenclaw.jpeg";
 import Hufflepuff from "../hufflepuff.jpeg";
+import { Header } from "../components";
 
 function Characters({ color }) {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function Characters({ color }) {
   }, []);
   return characters.list ? (
     <>
+      <Header color={color} />
       <div
         id="list"
         style={{

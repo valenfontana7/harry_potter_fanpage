@@ -1,12 +1,15 @@
 import React from "react";
 import Banner from "./Banner";
 import H from "./styles/Home.module.css";
-
+import { Header } from "../components";
 function Home() {
   return (
-    <div className={H.home}>
-      <Banner />
-    </div>
+    <>
+      <Header color="transparent" />
+      <div className={H.home}>
+        <Banner />
+      </div>
+    </>
   );
 }
 

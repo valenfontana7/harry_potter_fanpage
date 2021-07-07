@@ -18,7 +18,7 @@
 }
 .banner_info {
   color: rgba(255, 255, 255, 0.966);
-  font-size: 3rem;
+  font-size: 2.5rem;
   align-items: center;
   justify-content: center;
   padding: 5%;
@@ -31,6 +31,5 @@
   transition: all 2s;
 }
 .banner_info h1:hover {
-  font-size: 6.12rem;
-  text-align: right;
+  font-size: 6rem;
 }
