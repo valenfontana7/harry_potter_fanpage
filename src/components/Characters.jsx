@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import C from "./styles/Characters.module.css";
 import { getCharacters } from "../state/actions/characters";
@@ -8,9 +8,12 @@ import Slytherin from "../slytherin.jpeg";
 import Ravenclaw from "../ravenclaw.jpeg";
 import Hufflepuff from "../hufflepuff.jpeg";
 import { Header } from "../components";
-
+import Context from "../context/ThemeContext";
+import Cc from "./styles/CharacterCard.module.css";
 function Characters({ color }) {
+  const { context } = useContext(Context);
   const dispatch = useDispatch();
+  console.log(context);
   const house =
     color && color === "rgb(151,45,48)"
       ? Gryffindor
@@ -30,13 +33,25 @@ function Characters({ color }) {
       <Header color={color} />
       <div
         id="list"
-        style={{
-          backgroundImage: `url(${house})`,
-        }}
+        style={
+          context.openMenu
+            ? {
+                backgroundImage: `url(${house})`,
+                paddingTop: "40vh",
+              }
+            : {
+                backgroundImage: `url(${house})`,
+              }
+        }
         className={C.list}
       >
         {characters.list.map((character) => (
-          <CharacterCard character={character} />
+          <div
+            className={Cc.cuadro_aviso}
+            key={character.name.split(" ").join("_")}
+          >
+            <CharacterCard character={character} />
+          </div>
         ))}
       </div>
     </>

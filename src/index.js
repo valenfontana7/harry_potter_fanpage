@@ -5,11 +5,14 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./state/store";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeContextProvider>
+        <App />
+      </ThemeContextProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

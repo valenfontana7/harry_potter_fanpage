@@ -3,4 +3,29 @@
   width: 100%;
   flex-wrap: wrap;
   padding-top: 7.5%;
+  padding: 0 0 0 3.5%;
+}
+@media screen and (max-width: 412px) {
+  .list {
+    padding-top: 30%;
+    /* justify-content: center; */
+  }
+}
+@media screen and (min-height: 670px) {
+  .list {
+    padding-top: 28%;
+    /* justify-content: center; */
+  }
+}
+@media screen and (min-height: 813px) {
+  .list {
+    padding-top: 75%;
+    /* justify-content: center; */
+  }
+}
+@media screen and (min-width: 413px) {
+  .list {
+    padding-top: 7.5%;
+    /* justify-content: center; */
+  }
 }

@@ -5,3 +5,10 @@
   background-size: cover;
   background-position: center;
 }
+@media screen and (max-width: 412px) {
+  .home {
+    background-position: top;
+    width: 100%;
+    position: fixed;
+  }
+}
